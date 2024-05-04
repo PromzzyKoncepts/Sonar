@@ -34,7 +34,7 @@ const GoogleMapComponent = () => {
         // console.log('Clicked Lat/Lng:', latLng.lat(), latLng.lng());
         setClickedLocation({ lat: latLng.lat(), lng: latLng.lng() });
 
-        // Fetch distance from clicked location to the pinned location
+        // Here i fetched distance from clicked location to the pinned location
         fetchDistance({ lat: latLng.lat(), lng: latLng.lng() });
       });
     };
@@ -59,7 +59,6 @@ const GoogleMapComponent = () => {
       const distanceText = response?.data?.rows[0]?.elements[0]?.distance?.text;
       setDistanceText(distanceText);
       setLocationInfo(response?.data);
-      console.log("Distance:", response);
 
       // Show distance on the pinned location
       const infowindow = new window.google.maps.InfoWindow({

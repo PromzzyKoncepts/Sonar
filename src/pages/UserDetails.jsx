@@ -4,7 +4,6 @@ import axios from "axios";
 
 const UserDetails = () => {
   const { fetchedInfo, setFetchedInfo } = useLocation();
-  console.log(fetchedInfo);
   const url = "https://sonar-server.onrender.com";
   const token = localStorage.getItem("authToken");
 

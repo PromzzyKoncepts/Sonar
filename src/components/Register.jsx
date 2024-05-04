@@ -68,7 +68,6 @@ const Register = () => {
     };
 
     const res = await register(body);
-    // console.log(res, "this is from the register");
     if (res.status === 201) {
       setLoading(false);
       localStorage.setItem("authToken", res.data.token);
@@ -133,7 +132,7 @@ const Register = () => {
           className={`flex items-center justify-center p-2 w-full text-lg font-semibold ${
             !email || !password || !name || !confirmPassword
               ? "bg-gray-200 text-gray-700"
-              : "bg-[#f02c56] text-white"
+              : "bg-orange-500 text-white"
           }`}
         >
           {loading ? (

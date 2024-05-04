@@ -96,7 +96,7 @@ const Login = () => {
             className={`flex items-center justify-center p-2 w-full text-lg font-semibold ${
               !email || !password
                 ? "bg-gray-200 text-gray-800"
-                : "bg-[#f02c56] text-white"
+                : "bg-orange-500 text-white"
             }`}
           >
             {loading ? (
