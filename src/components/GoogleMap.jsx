@@ -11,6 +11,9 @@ const GoogleMapComponent = () => {
   const [clickedLocation, setClickedLocation] = useState(null);
   const navigate = useNavigate()
 
+  const apiKey = import.meta.env.VITE_GOOGLE_MAP_API_KEY;
+
+
   useEffect(() => {
     const loadMap = () => {
       const google = window.google;
@@ -38,7 +41,7 @@ const GoogleMapComponent = () => {
 
     if (!window.google) {
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCL1w08fLE41a2YEed4RmjFTduRz2chMRE&libraries=places`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
       script.onload = loadMap;
       document.head.appendChild(script);
     } else {
@@ -47,7 +50,6 @@ const GoogleMapComponent = () => {
   }, []);
 
   const fetchDistance = async (destination) => {
-    const apiKey = "AIzaSyCL1w08fLE41a2YEed4RmjFTduRz2chMRE";
     // const origin = `${clickedLocation.lat},${clickedLocation.lng}`;
     const destinationStr = `${destination?.lat},${destination?.lng}`;
     const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=6.5243793,3.3792057&destinations=${destinationStr}&key=${apiKey}`;
@@ -59,7 +61,6 @@ const GoogleMapComponent = () => {
       setLocationInfo(response?.data);
       console.log("Distance:", response);
 
-      console.log(map, "ïohjjsohcouch");
       // Show distance on the pinned location
       const infowindow = new window.google.maps.InfoWindow({
         content: distanceText,
