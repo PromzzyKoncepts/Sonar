@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "../context/MapContext";
 import { useNavigate } from "react-router-dom";
 
 const GoogleMapComponent = () => {
-  const { map, setMap, phoneNo, setDistanceText, setLocationInfo, postUserDetails,fetchUserLocation, fetchedInfo, setFetchedInfo, setIsLoading } =
+  const { map, setMap, phoneNo, setDistanceText, setLocationInfo, postUserDetails,fetchUserLocation, setFetchedInfo, setIsLoading } =
     useLocation();
   const mapContainerRef = useRef(null);
   const [clickedLocation, setClickedLocation] = useState(null);
