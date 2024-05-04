@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "../context/MapContext";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const UserDetails = () => {
   const { fetchedInfo, setFetchedInfo } = useLocation();
@@ -50,6 +51,10 @@ const UserDetails = () => {
         <div>
           Delivery Time: <span className="font-medium text-lg">{fetchedInfo?.timeTaken}</span>
         </div>
+        <div>
+          <Link to="/" className="text-center p-2 bg-orange-500 text-white rounded-xl">Go Home</Link>
+        </div>
+
       </div>
     </div>
   );

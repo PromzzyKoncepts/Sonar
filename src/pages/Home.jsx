@@ -45,12 +45,20 @@ const Home = () => {
           </div>
           <div className="mt-4">
             {isLoggedIn ? (
+                <div>
               <Link
                 to="/boarding"
                 className="text-center bg-orange-500 text-white py-2 px-3 rounded-xl "
               >
                 Get Started
               </Link>
+                {userInfo && <Link
+                to="/user/details"
+                className="text-center border-orange-500 border-2 ml-3 text-gray-800 hover:bg-orange-50 py-2 px-3 rounded-xl "
+              >
+                View Tracks
+              </Link>}
+                </div>
             ) : (
               <button className="text-center bg-orange-500 animate-pulse text-white py-2 px-3 rounded-xl "  onClick={() => setShowAuthOverlay(true)}>Get Started</button>
             )}

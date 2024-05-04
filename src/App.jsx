@@ -8,14 +8,14 @@ import UserDetails from './pages/UserDetails'
 import { useUser } from './context/UserContext'
 
 function App() {
-const {isLoggedIn } = useUser()
+const {isLoggedIn} = useUser()
   return (
     <div className="">
         <Routes>
         <Route path='/' index element={<Home/>}></Route>
         <Route path='/boarding' element={isLoggedIn ? <GetStarted/> : <Navigate to="/"/>}></Route>
         <Route path='/map' element={isLoggedIn ? <Maps/>  : <Navigate to="/"/>}></Route>
-        <Route path='/user/details' element={isLoggedIn ? <UserDetails/> : <Navigate to="/"/>}></Route>
+        <Route path='/user/details' element={<UserDetails/>}></Route>
         </Routes>
     </div>
   )
