@@ -1,19 +1,17 @@
 /* eslint-disable no-useless-escape */
 import { useState } from "react";
 import TextInput from "../components/TextInput";
-import { BiLoaderCircle } from "react-icons/bi";
 import { useLocation } from "../context/MapContext";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 
 const GetStarted = () => {
-  const {phoneNo, setPhoneNo, address, setAddress} = useLocation();
+  const { phoneNo, setPhoneNo, address, setAddress } = useLocation();
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  const {userInfo} = useUser()
+  const { userInfo } = useUser();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const showError = (type) => {
     if (error && Object.entries(error).length > 0 && error?.type == type) {
@@ -21,7 +19,6 @@ const GetStarted = () => {
     }
     return "";
   };
-  
 
   const validate = () => {
     setError(null);
@@ -43,7 +40,7 @@ const GetStarted = () => {
     let isError = validate();
     if (isError) return;
 
-    navigate('/map')
+    navigate("/map");
   };
 
   return (
@@ -51,14 +48,17 @@ const GetStarted = () => {
       onSubmit={handleSubmit}
       className=" mt-28 relative max-w-[470px] h-[85%] bg-slate-100 w-full p-10 shadow-xl z-[100] rounded-lg mx-auto"
     >
-      <div className="text-center  mb-5"> <span className="text-orange-600">Welcome {userInfo?.firstName.toUpperCase()}</span>
+      <div className="text-center  mb-5">
+        {" "}
+        <span className="text-orange-600">
+          Welcome {userInfo?.firstName.toUpperCase()}
+        </span>
         <h1 className="text-center text-2xl font-medium">
           Enter your shipping details
         </h1>
         <small>Both fields are required!</small>
       </div>
-      
-      
+
       <div className=" mt-6">
         <TextInput
           string={address}
@@ -85,21 +85,13 @@ const GetStarted = () => {
           onClick={handleSubmit}
           disabled={!address || !phoneNo}
           className={`flex items-center justify-center p-2 w-full text-lg font-semibold ${
-           !address || !phoneNo
+            !address || !phoneNo
               ? "bg-gray-200 text-gray-800"
               : "bg-orange-500 hover:bg-orange-600 text-white"
           }
             disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed`}
         >
-          {loading ? (
-            <BiLoaderCircle
-              size={23}
-              className="animate-spin"
-              color="#ffffff"
-            />
-          ) : (
-            "Next"
-          )}
+          Next
         </button>
 
         <div id="map"></div>
