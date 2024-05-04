@@ -52,7 +52,7 @@ const GoogleMapComponent = () => {
   const fetchDistance = async (destination) => {
     // const origin = `${clickedLocation.lat},${clickedLocation.lng}`;
     const destinationStr = `${destination?.lat},${destination?.lng}`;
-    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=6.5243793,3.3792057&destinations=${destinationStr}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${destinationStr}&origins=6.5243793,3.3792057&units=imperial&key=${apiKey}`;
 
     try {
       const response = await axios.get(url);
