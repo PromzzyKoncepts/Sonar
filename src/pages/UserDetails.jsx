@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "../context/MapContext";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const UserDetails = () => {
   const { fetchedInfo, setFetchedInfo } = useLocation();
-  console.log(fetchedInfo);
   const url = "https://sonar-server.onrender.com";
   const token = localStorage.getItem("authToken");
 
@@ -29,12 +29,12 @@ const UserDetails = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen ">
-      <div className="py-10 px-8 shadow-lg rounded-md bg-gray-100 flex flex-col gap-5">
+    <div className="flex items-center justify-center h-screen text-slate-800 bg-gray-100">
+      <div className="py-10 sm:px-8 px-6 shadow-lg rounded-md bg-white flex mt flex-col gap-5">
         <div>
-          <h1 className="text-4xl text-orange-500 font-bold text-center">Congratulations!</h1>
+          <h1 className="md:text-4xl text-3xl text-orange-500 font-bold text-center">Congratulations!</h1>
           <p className="text-sm text-center">Your tracking details are ready!</p>
-          <h2 className="text-3xl font-bold text-center my-2">#{fetchedInfo?.id}</h2>
+          <h2 className="md:text-3xl text-lg font-bold text-center my-2">#{fetchedInfo?.id}</h2>
         </div>
         <div>
           Recipient Name: <span className="font-medium text-lg">{fetchedInfo?.firstName?.toUpperCase()}</span>
@@ -51,6 +51,10 @@ const UserDetails = () => {
         <div>
           Delivery Time: <span className="font-medium text-lg">{fetchedInfo?.timeTaken}</span>
         </div>
+        <div>
+          <Link to="/" className="text-center p-2 bg-orange-500 text-white rounded-xl">Go Home</Link>
+        </div>
+
       </div>
     </div>
   );

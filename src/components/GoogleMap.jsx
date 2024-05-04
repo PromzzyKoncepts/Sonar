@@ -34,7 +34,7 @@ const GoogleMapComponent = () => {
         // console.log('Clicked Lat/Lng:', latLng.lat(), latLng.lng());
         setClickedLocation({ lat: latLng.lat(), lng: latLng.lng() });
 
-        // Fetch distance from clicked location to the pinned location
+        // Here i fetched distance from clicked location to the pinned location
         fetchDistance({ lat: latLng.lat(), lng: latLng.lng() });
       });
     };
@@ -52,14 +52,13 @@ const GoogleMapComponent = () => {
   const fetchDistance = async (destination) => {
     // const origin = `${clickedLocation.lat},${clickedLocation.lng}`;
     const destinationStr = `${destination?.lat},${destination?.lng}`;
-    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=6.5243793,3.3792057&destinations=${destinationStr}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${destinationStr}&origins=6.5243793,3.3792057&units=imperial&key=${apiKey}`;
 
     try {
       const response = await axios.get(url);
       const distanceText = response?.data?.rows[0]?.elements[0]?.distance?.text;
       setDistanceText(distanceText);
       setLocationInfo(response?.data);
-      console.log("Distance:", response);
 
       // Show distance on the pinned location
       const infowindow = new window.google.maps.InfoWindow({

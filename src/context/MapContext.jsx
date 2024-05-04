@@ -28,7 +28,7 @@ export const MapProvider = ({ children }) => {
         },
       });
 
-      console.log(res);
+      
       return res;
     } catch (error) {
       console.error(error);
@@ -44,7 +44,6 @@ export const MapProvider = ({ children }) => {
         },
       });
 
-      console.log(res);
       setFetchedInfo(res?.data)
       return res;
     } catch (error) {

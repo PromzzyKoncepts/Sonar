@@ -68,7 +68,6 @@ const Register = () => {
     };
 
     const res = await register(body);
-    // console.log(res, "this is from the register");
     if (res.status === 201) {
       setLoading(false);
       localStorage.setItem("authToken", res.data.token);
@@ -82,8 +81,8 @@ const Register = () => {
 
   return (
     <form onSubmit={signUp}>
-      <h1 className="text-center text-[28px] mb-4 font-bold">Create Account</h1>
-      {regError && <div>{regError}</div>}
+      <div className=" mb-4"><h1 className="text-center text-[28px] font-bold">Create Account</h1>
+        {regError && <div className="text-center text-red-500 animate-bounce mt-1.5">{regError}</div>}</div>
       <div className="px-6 pb-2">
         <TextInput
           string={name}
@@ -133,7 +132,7 @@ const Register = () => {
           className={`flex items-center justify-center p-2 w-full text-lg font-semibold ${
             !email || !password || !name || !confirmPassword
               ? "bg-gray-200 text-gray-700"
-              : "bg-[#f02c56] text-white"
+              : "bg-orange-500 text-white"
           }`}
         >
           {loading ? (

@@ -66,8 +66,8 @@ const Login = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1 className="text-center text-[28px] mb-4 font-bold">Log in</h1>
-        {regError && <div>{regError}</div>}
+        <div className=" mb-4"><h1 className="text-center text-[28px] font-bold">Log in</h1>
+        {regError && <div className="text-center  mt-1.5">{regError}</div>}</div>
         <div className="px-6 pb-2">
           <TextInput
             string={email}
@@ -94,9 +94,9 @@ const Login = () => {
             type="submit"
             onClick={handleSubmit}
             className={`flex items-center justify-center p-2 w-full text-lg font-semibold ${
-              !email || !password
+              !email || !password || error
                 ? "bg-gray-200 text-gray-800"
-                : "bg-[#f02c56] text-white"
+                : "bg-orange-500 text-white"
             }`}
           >
             {loading ? (

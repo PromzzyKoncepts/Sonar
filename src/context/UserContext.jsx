@@ -30,7 +30,6 @@ export const UserProvider = ({ children }) => {
     try {
       const res = await axios.post(`${url}/user/register`, body);
       setUserInfo(res.data);
-      console.log(res, "res from the context");
       return res;
     } catch (error) {
       console.error(error);
@@ -51,7 +50,6 @@ export const UserProvider = ({ children }) => {
     try {
       const res = await axios.post(`${url}/user/login`, body);
       setUserInfo(res.data);
-      console.log(res, "res from the context");
       return res;
     } catch (error) {
       console.error(error);
@@ -82,6 +80,7 @@ export const UserProvider = ({ children }) => {
     <UserContext.Provider
       value={{
         userInfo,
+        setUserInfo,
         isLoggedIn,
         setIsLoggedIn,
         register,
