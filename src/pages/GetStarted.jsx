@@ -51,7 +51,7 @@ const GetStarted = () => {
       <div className="text-center  mb-5">
         {" "}
         <span className="text-orange-600">
-          Welcome {userInfo?.firstName.toUpperCase()}
+          Welcome {userInfo?.firstName?.toUpperCase()}
         </span>
         <h1 className="text-center text-2xl font-medium">
           Enter your shipping details

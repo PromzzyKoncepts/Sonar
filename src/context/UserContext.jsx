@@ -80,6 +80,7 @@ export const UserProvider = ({ children }) => {
     <UserContext.Provider
       value={{
         userInfo,
+        setUserInfo,
         isLoggedIn,
         setIsLoggedIn,
         register,
