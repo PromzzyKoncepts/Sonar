@@ -81,8 +81,8 @@ const Register = () => {
 
   return (
     <form onSubmit={signUp}>
-      <h1 className="text-center text-[28px] mb-4 font-bold">Create Account</h1>
-      {regError && <div>{regError}</div>}
+      <div className=" mb-4"><h1 className="text-center text-[28px] font-bold">Create Account</h1>
+        {regError && <div className="text-center text-red-500 animate-bounce mt-1.5">{regError}</div>}</div>
       <div className="px-6 pb-2">
         <TextInput
           string={name}

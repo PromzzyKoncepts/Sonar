@@ -46,7 +46,7 @@ const GetStarted = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" mt-28 relative max-w-[470px] h-[85%] bg-slate-100 w-full p-10 shadow-xl z-[100] rounded-lg mx-auto"
+      className=" mt-28 relative max-w-[470px] h-[85%] bg-slate-50 w-full p-10 shadow-xl z-[100] rounded-lg mx-auto"
     >
       <div className="text-center  mb-5">
         {" "}

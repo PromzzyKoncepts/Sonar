@@ -6,8 +6,8 @@ const Maps = () => {
   let { distanceText, locationInfo, isLoading } = useLocation();
   return (
     <div>
-      <div className="fixed top-14 left-[10px] w-[28rem] rounded-lg bg-white z-[1000]">
-        <h2 className="text-lg text-center font-medium  border-b-2  p-5">
+      <div className="fixed top-14 left-[10px] max-w-[28rem]  mr-[10px] sm:mr-0 rounded-lg bg-white z-[1000]">
+        <h2 className="md:text-lg text-[0.8rem] text-center font-medium  border-b-2  p-5">
           Kindly pin your dropoff location
         </h2>
 
