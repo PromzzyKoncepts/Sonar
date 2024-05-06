@@ -1,8 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# SONAR
 
-# Project Name
-
-> Description the project.
+> A simple customer tracker app built as part test for the role of a fullstack JavaScript Developer @YIP Online Ltd
 
 
 ## Built With
@@ -11,46 +9,54 @@
 - Frameworks
 - Technologies used
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+# Backend Repo
+- [https://github.com/PromzzyKoncepts/Sonar-Server](https://github.com/PromzzyKoncepts/Sonar-Server)
 
 
-To get a local copy up and running follow these simple example steps.
+## Live Demo 
 
-### Prerequisites
+[Sonar Demo Link](https://sonar-flax.vercel.app)
 
-### Setup
 
-### Install
 
-### Usage
+### RESTful API Node Express Mongoose Example
 
-### Run tests
+The project builds user-friendly interfaces using Vite + React + TailwindCSS, ...
+
+## Manual Installation
+
+Clone the repo:
+
+```bash
+git clone https://github.com/PromzzyKoncepts/Sonar.git
+cd Sonar
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Running in development:
+
+```bash
+npm run dev
+```
 
 ### Deployment
+```bash
+npm run build
+```
 
 
+## Author
 
-## Authors
+👤 **Promise Okechukwu**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@PromzzyKoncepts](https://github.com/PromzzyKoncepts)
+- Twitter: [@pr0mzzy](https://twitter.com/pr0mzzy)
+- LinkedIn: [promiseokechukwu](https://linkedin.com/in/promiseokechukwu)
 
 ## 🤝 Contributing
 
@@ -64,9 +70,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Google Map Api
+
 
 ## 📝 License
 
