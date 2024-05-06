@@ -19,7 +19,7 @@
 
 
 
-### RESTful API Node Express Mongoose Example
+### UI technologies
 
 The project builds user-friendly interfaces using Vite + React + TailwindCSS, ...
 
