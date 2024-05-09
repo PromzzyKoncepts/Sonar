@@ -5,9 +5,9 @@
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- Vite, Tailwind CSS 
+- Google Map distance Matrix API
 
 # Backend Repo
 - [https://github.com/PromzzyKoncepts/Sonar-Server](https://github.com/PromzzyKoncepts/Sonar-Server)
